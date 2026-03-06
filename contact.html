@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get in touch with Oluseye Oyeniran — AI Engineer and Data Scientist open to collaboration and opportunities." />
+  <title>Contact — Oluseye Oyeniran</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Oluseye <span>O.</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="nav-cta">Hire Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+       PAGE HEADER
+  ============================================================ -->
+  <header class="page-header">
+    <div class="page-header-inner">
+      <p class="section-label">Get In Touch</p>
+      <h1>Let's <em>Talk</em></h1>
+      <p>
+        Open to new opportunities, collaborations, and conversations about
+        AI engineering, backend development, and data science.
+      </p>
+    </div>
+  </header>
+
+
+  <!-- ============================================================
+       CONTACT CONTENT
+  ============================================================ -->
+  <section class="section" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Contact info -->
+        <div class="reveal">
+          <h2 id="contact-heading" class="contact-info">
+            <span style="font-family: var(--font-display); font-size: clamp(24px, 3vw, 36px); font-weight: 400; line-height: 1.2; color: var(--text); display: block; margin-bottom: 20px;">
+              Reach out.<br>
+              <em style="color: var(--accent);">I respond promptly.</em>
+            </span>
+          </h2>
+          <p style="font-size: 15px; font-weight: 300; color: var(--text-secondary); line-height: 1.8; margin-bottom: 40px;">
+            Whether you have a specific project in mind, want to discuss AI engineering,
+            or are exploring potential collaboration — feel free to reach out directly
+            or fill out the form.
+          </p>
+
+          <div class="contact-details" role="list">
+            <div class="contact-detail-item" role="listitem">
+              <span class="contact-detail-label">Email</span>
+              <a href="mailto:oluseyeoyeniran@gmail.com" class="contact-detail-value">
+                oluseyeoyeniran@gmail.com
+              </a>
+            </div>
+            <div class="contact-detail-item" role="listitem">
+              <span class="contact-detail-label">Phone</span>
+              <a href="tel:+2348185100930" class="contact-detail-value">
+                +234 818 510 0930
+              </a>
+            </div>
+            <div class="contact-detail-item" role="listitem">
+              <span class="contact-detail-label">Location</span>
+              <span class="contact-detail-value">Abuja, Nigeria</span>
+            </div>
+            <div class="contact-detail-item" role="listitem">
+              <span class="contact-detail-label">Availability</span>
+              <span class="contact-detail-value">Open to remote &amp; hybrid roles</span>
+            </div>
+          </div>
+
+          <div class="contact-social">
+            <a href="https://www.linkedin.com/in/oluseye-oyeniran-509456109/"
+               class="social-link"
+               target="_blank"
+               rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/Eriayomide/"
+               class="social-link"
+               target="_blank"
+               rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <div class="reveal reveal-delay-2">
+          <!--
+            To make this form functional, replace the action attribute with your
+            Formspree endpoint: https://formspree.io/
+            e.g. action="https://formspree.io/f/your-form-id" method="POST"
+          -->
+          <form
+            class="contact-form"
+            action="#"
+            method="POST"
+            novalidate
+            aria-label="Contact form"
+          >
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                  autocomplete="name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="your@email.com"
+                  required
+                  autocomplete="email"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject">
+                <option value="" disabled selected>Select a topic</option>
+                <option value="job-opportunity">Job Opportunity</option>
+                <option value="freelance">Freelance / Contract Work</option>
+                <option value="collaboration">Collaboration</option>
+                <option value="consultation">AI Consultation</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell me about your project or what you have in mind..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="align-self: flex-start;">
+              Send Message
+            </button>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-logo">Oluseye <span>O.</span></div>
+      <p class="footer-copy">&copy; 2025 Oluseye Oyeniran. All rights reserved.</p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="https://www.linkedin.com/in/oluseye-oyeniran-509456109/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/Eriayomide/" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

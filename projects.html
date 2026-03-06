@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projects by Oluseye Oyeniran — AI engineering, RAG systems, FastAPI backends, and data science." />
+  <title>Projects — Oluseye Oyeniran</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Oluseye <span>O.</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="nav-cta">Hire Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+       PAGE HEADER
+  ============================================================ -->
+  <header class="page-header">
+    <div class="page-header-inner">
+      <p class="section-label">Portfolio</p>
+      <h1>Selected <em>Work</em></h1>
+      <p>
+        A collection of AI engineering, backend, and data science projects —
+        built for real users, real organisations, and real impact.
+      </p>
+    </div>
+  </header>
+
+
+  <!-- ============================================================
+       FEATURED AI ENGINEERING PROJECTS
+  ============================================================ -->
+  <section class="section" aria-labelledby="ai-projects-heading">
+    <div class="container">
+
+      <p class="section-label reveal">AI Engineering</p>
+      <h2 class="section-title reveal" id="ai-projects-heading">
+        Core <em>Projects</em>
+      </h2>
+
+      <!-- ── PROJECT 1: KingdomConnect ── -->
+      <div class="project-full" id="kingdomconnect">
+        <div class="project-full-inner">
+
+          <div class="project-full-content reveal">
+            <p class="project-number">01</p>
+            <h3 class="project-full-title">
+              KingdomConnect<br>
+              <em>Enterprise Church Management System</em>
+            </h3>
+            <p class="project-full-desc">
+              A production-grade enterprise platform I designed and directed for multi-level
+              church administration. I defined the full system architecture — the organisational
+              hierarchy, data models, access control logic, and AI integration layer — then
+              brought it to life using AI-assisted development in Python, FastAPI, and PostgreSQL.
+            </p>
+            <p class="project-full-desc">
+              The platform covers membership management, service and event reporting, role-based
+              access control with fine-grained permissions, and a Claude API-powered assistant
+              for administrative queries. This project reflects how I work: strong system thinking
+              and domain design, with AI as a development partner to ship complete, working software.
+            </p>
+
+            <div class="project-full-meta">
+              <div class="meta-item">
+                <p class="meta-item-label">Role</p>
+                <p class="meta-item-value">System Designer · AI Director</p>
+              </div>
+              <div class="meta-item">
+                <p class="meta-item-label">Type</p>
+                <p class="meta-item-value">Enterprise Platform</p>
+              </div>
+              <div class="meta-item">
+                <p class="meta-item-label">Backend</p>
+                <p class="meta-item-value">Python · FastAPI · PostgreSQL</p>
+              </div>
+              <div class="meta-item">
+                <p class="meta-item-label">AI Layer</p>
+                <p class="meta-item-value">Claude API · LLM Integration</p>
+              </div>
+            </div>
+
+            <div class="featured-tags" style="margin-bottom: 24px;">
+              <span class="tag">Python</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Claude API</span>
+              <span class="tag">RBAC</span>
+              <span class="tag">REST API</span>
+              <span class="tag">Enterprise Architecture</span>
+            </div>
+
+            <!-- Code snippet: role-based access control check -->
+            <div class="code-block">
+              <span class="code-block-label">Role-Based Access Control — permission check</span>
+              <pre><code><span class="tok-kw">def</span> <span class="tok-fn">check_permission</span>(user: User, resource: <span class="tok-cls">str</span>, action: <span class="tok-cls">str</span>) -> <span class="tok-cls">bool</span>:
+    <span class="tok-cm"># Resolve role hierarchy: church → region → country → HQ</span>
+    role_chain = <span class="tok-fn">get_role_chain</span>(user.role, user.scope_level)
+
+    <span class="tok-kw">for</span> role <span class="tok-kw">in</span> role_chain:
+        policy = PERMISSION_MATRIX.get(role, {})
+        <span class="tok-kw">if</span> action <span class="tok-kw">in</span> policy.get(resource, []):
+            <span class="tok-kw">return True</span>
+
+    <span class="tok-kw">raise</span> <span class="tok-cls">PermissionDenied</span>(
+        f<span class="tok-str">"Role '{user.role}' cannot '{action}' on '{resource}'"</span>
+    )</code></pre>
+            </div>
+
+            <span class="btn btn-ghost" style="cursor: default; opacity: 0.6;">Private Repository</span>
+          </div>
+
+          <div class="project-full-visual reveal reveal-delay-2">
+            <div class="project-visual" style="aspect-ratio: 4/3;">
+              <div class="project-visual-inner visual-kingdomconnect">
+                <span>KingdomConnect</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── PROJECT 2: HopeBridge AI ── -->
+      <div class="project-full" id="hopebridge">
+        <div class="project-full-inner reverse">
+
+          <div class="project-full-content reveal">
+            <p class="project-number">02</p>
+            <h3 class="project-full-title">
+              HopeBridge AI<br>
+              <em>RAG-Powered Resilience Support System</em>
+            </h3>
+            <p class="project-full-desc">
+              A context-aware support companion I designed for Nigerians aged 16 and above facing
+              life challenges across 20 categories — from business failure and job loss to grief,
+              domestic abuse, and mental health. The core design principle: the user must feel
+              heard before they are helped.
+            </p>
+            <p class="project-full-desc">
+              I authored the full system design — the 4-layer conversation flow, the 3-level
+              crisis detection logic (including Nigerian Pidgin signal phrases), the 20-category
+              life challenge taxonomy, and the resource database structure. Implementation uses
+              FAISS semantic retrieval, AI-assisted development in Python and FastAPI, and the
+              Claude API for response generation.
+            </p>
+
+            <div class="project-full-meta">
+              <div class="meta-item">
+                <p class="meta-item-label">Platforms</p>
+                <p class="meta-item-value">Web · Mobile · WhatsApp</p>
+              </div>
+              <div class="meta-item">
+                <p class="meta-item-label">Languages</p>
+                <p class="meta-item-value">English · Nigerian Pidgin</p>
+              </div>
+              <div class="meta-item">
+                <p class="meta-item-label">Retrieval</p>
+                <p class="meta-item-value">FAISS · sentence-transformers</p>
+              </div>
+              <div class="meta-item">
+                <p class="meta-item-label">AI Layer</p>
+                <p class="meta-item-value">Claude API · RAG Pipeline</p>
+              </div>
+            </div>
+
+            <div class="featured-tags" style="margin-bottom: 24px;">
+              <span class="tag">Python</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">RAG</span>
+              <span class="tag">FAISS</span>
+              <span class="tag">Claude API</span>
+              <span class="tag">WhatsApp API</span>
+              <span class="tag">NLP</span>
+              <span class="tag">Crisis Detection</span>
+            </div>
+
+            <!-- Code snippet: 3-level distress detector -->
+            <div class="code-block">
+              <span class="code-block-label">3-Level Distress Detector — Pidgin-aware</span>
+              <pre><code>CRISIS_SIGNALS = [
+    <span class="tok-str">"i want to end it all"</span>, <span class="tok-str">"no reason to continue"</span>,
+    <span class="tok-str">"i wan just disappear"</span>, <span class="tok-str">"make god just take me"</span>,
+    <span class="tok-str">"i don plan how i go do am"</span>,
+]
+
+AMBER_SIGNALS = [
+    <span class="tok-str">"i tire for this life"</span>, <span class="tok-str">"wetin be the point"</span>,
+    <span class="tok-str">"nobody care if i dey here"</span>, <span class="tok-str">"i don give up"</span>,
+]
+
+<span class="tok-kw">def</span> <span class="tok-fn">classify_distress</span>(message: <span class="tok-cls">str</span>) -> <span class="tok-cls">DistressLevel</span>:
+    text = message.lower().strip()
+    <span class="tok-kw">if</span> <span class="tok-fn">any</span>(sig <span class="tok-kw">in</span> text <span class="tok-kw">for</span> sig <span class="tok-kw">in</span> CRISIS_SIGNALS):
+        <span class="tok-kw">return</span> DistressLevel.RED    <span class="tok-cm"># immediate crisis</span>
+    <span class="tok-kw">if</span> <span class="tok-fn">any</span>(sig <span class="tok-kw">in</span> text <span class="tok-kw">for</span> sig <span class="tok-kw">in</span> AMBER_SIGNALS):
+        <span class="tok-kw">return</span> DistressLevel.AMBER  <span class="tok-cm"># check in deeper</span>
+    <span class="tok-kw">return</span> DistressLevel.GREEN   <span class="tok-cm"># standard conversation</span></code></pre>
+            </div>
+
+            <span class="btn btn-ghost" style="cursor: default; opacity: 0.6;">Private Repository</span>
+          </div>
+
+          <div class="project-full-visual reveal reveal-delay-2">
+            <div class="project-visual" style="aspect-ratio: 4/3;">
+              <div class="project-visual-inner visual-hopebridge">
+                <span>HopeBridge AI</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── PROJECT 3: RAG Chatbot ── -->
+      <div class="project-full" id="rag">
+        <div class="project-full-inner">
+
+          <div class="project-full-content reveal">
+            <p class="project-number">03</p>
+            <h3 class="project-full-title">
+              RAG Chatbot System<br>
+              <em>Document-Aware AI Assistant</em>
+            </h3>
+            <p class="project-full-desc">
+              A document-aware AI assistant I designed and built using AI-assisted development.
+              The system ingests enterprise documents, builds a semantic vector index, and
+              generates accurate, grounded responses via the Claude API — for use cases where
+              hallucination-free, source-backed answers are non-negotiable.
+            </p>
+            <p class="project-full-desc">
+              I designed the retrieval architecture — document ingestion pipeline, embedding
+              strategy, configurable top-k retrieval — and directed the FastAPI backend
+              implementation for clean integration with downstream services.
+            </p>
+
+            <div class="project-full-meta">
+              <div class="meta-item">
+                <p class="meta-item-label">Role</p>
+                <p class="meta-item-value">AI Engineer · System Designer</p>
+              </div>
+              <div class="meta-item">
+                <p class="meta-item-label">Type</p>
+                <p class="meta-item-value">AI Backend Service</p>
+              </div>
+              <div class="meta-item">
+                <p class="meta-item-label">Backend</p>
+                <p class="meta-item-value">Python · FastAPI</p>
+              </div>
+              <div class="meta-item">
+                <p class="meta-item-label">Deployment</p>
+                <p class="meta-item-value">DigitalOcean</p>
+              </div>
+            </div>
+
+            <div class="featured-tags" style="margin-bottom: 24px;">
+              <span class="tag">Python</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">Claude API</span>
+              <span class="tag">Vector Search</span>
+              <span class="tag">Document Ingestion</span>
+              <span class="tag">DigitalOcean</span>
+            </div>
+
+            <!-- Code snippet: RAG retrieval + prompt assembly -->
+            <div class="code-block">
+              <span class="code-block-label">RAG Pipeline — retrieval &amp; prompt assembly</span>
+              <pre><code><span class="tok-kw">def</span> <span class="tok-fn">retrieve_and_respond</span>(query: <span class="tok-cls">str</span>, index: faiss.Index) -> <span class="tok-cls">str</span>:
+    <span class="tok-cm"># Embed the user query</span>
+    query_vec = embedder.<span class="tok-fn">encode</span>([query])
+
+    <span class="tok-cm"># Retrieve top-3 relevant document chunks</span>
+    _, indices = index.<span class="tok-fn">search</span>(query_vec, k=<span class="tok-num">3</span>)
+    context = <span class="tok-str">"\n\n"</span>.<span class="tok-fn">join</span>(doc_store[i] <span class="tok-kw">for</span> i <span class="tok-kw">in</span> indices[<span class="tok-num">0</span>])
+
+    <span class="tok-cm"># Assemble grounded prompt for Claude</span>
+    prompt = (
+        <span class="tok-str">f"Answer using only the context below.\n\n"</span>
+        <span class="tok-str">f"Context:\n{context}\n\n"</span>
+        <span class="tok-str">f"Question: {query}"</span>
+    )
+    <span class="tok-kw">return</span> <span class="tok-fn">call_claude</span>(prompt)</code></pre>
+            </div>
+
+            <span class="btn btn-ghost" style="cursor: default; opacity: 0.6;">Private Repository</span>
+          </div>
+
+          <div class="project-full-visual reveal reveal-delay-2">
+            <div class="project-visual" style="aspect-ratio: 4/3;">
+              <div class="project-visual-inner visual-rag">
+                <span>RAG Chatbot</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── PROJECT 4: VIN Decoder ── -->
+      <div class="project-full" id="vin">
+        <div class="project-full-inner reverse">
+
+          <div class="project-full-content reveal">
+            <p class="project-number">04</p>
+            <h3 class="project-full-title">
+              VIN Decoder AI Engine<br>
+              <em>Intelligent Vehicle Data Service</em>
+            </h3>
+            <p class="project-full-desc">
+              An AI-powered VIN (Vehicle Identification Number) decoding engine I designed
+              for Nigeria's VREG government vehicle registration platform. I defined the
+              anomaly detection logic, the data extraction schema, and the API contract —
+              then directed implementation using AI-assisted development in Python and FastAPI.
+            </p>
+            <p class="project-full-desc">
+              The system interprets VINs to return structured vehicle metadata and uses the
+              Claude API to flag suspicious or inconsistent registration records. Applied AI
+              in a live government technology context, handling real operational workflows.
+            </p>
+
+            <div class="project-full-meta">
+              <div class="meta-item">
+                <p class="meta-item-label">Context</p>
+                <p class="meta-item-value">Government Technology</p>
+              </div>
+              <div class="meta-item">
+                <p class="meta-item-label">Platform</p>
+                <p class="meta-item-value">Nigeria VREG System</p>
+              </div>
+              <div class="meta-item">
+                <p class="meta-item-label">Backend</p>
+                <p class="meta-item-value">Python · FastAPI</p>
+              </div>
+              <div class="meta-item">
+                <p class="meta-item-label">AI Layer</p>
+                <p class="meta-item-value">Claude API · Anomaly Detection</p>
+              </div>
+            </div>
+
+            <div class="featured-tags" style="margin-bottom: 24px;">
+              <span class="tag">Python</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">Claude API</span>
+              <span class="tag">Structured Extraction</span>
+              <span class="tag">Anomaly Detection</span>
+              <span class="tag">REST API</span>
+            </div>
+
+            <!-- Code snippet: VIN decoding + anomaly flag -->
+            <div class="code-block">
+              <span class="code-block-label">VIN Decoder — parse &amp; flag anomalies</span>
+              <pre><code><span class="tok-kw">def</span> <span class="tok-fn">decode_vin</span>(vin: <span class="tok-cls">str</span>) -> <span class="tok-cls">VehicleRecord</span>:
+    <span class="tok-kw">if</span> <span class="tok-fn">len</span>(vin) != <span class="tok-num">17</span>:
+        <span class="tok-kw">raise</span> <span class="tok-cls">ValueError</span>(<span class="tok-str">"VIN must be exactly 17 characters"</span>)
+
+    record = <span class="tok-cls">VehicleRecord</span>(
+        country   = VIN_COUNTRY_MAP.get(vin[:<span class="tok-num">2</span>], <span class="tok-str">"Unknown"</span>),
+        make      = WMI_MAP.get(vin[:<span class="tok-num">3</span>], <span class="tok-str">"Unknown"</span>),
+        model_year = YEAR_MAP.get(vin[<span class="tok-num">9</span>], <span class="tok-str">"Unknown"</span>),
+        serial    = vin[<span class="tok-num">11</span>:],
+    )
+
+    <span class="tok-cm"># Flag suspicious patterns via Claude API</span>
+    record.anomaly = <span class="tok-fn">check_anomaly</span>(vin, record)
+    <span class="tok-kw">return</span> record</code></pre>
+            </div>
+
+            <span class="btn btn-ghost" style="cursor: default; opacity: 0.6;">Private Repository</span>
+          </div>
+
+          <div class="project-full-visual reveal reveal-delay-2">
+            <div class="project-visual" style="aspect-ratio: 4/3;">
+              <div class="project-visual-inner visual-vin">
+                <span>VIN Decoder</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       ANALYTICS & DATA SCIENCE PROJECTS
+  ============================================================ -->
+  <section class="section" style="background: var(--surface); border-top: 1px solid var(--border);" aria-labelledby="analytics-heading">
+    <div class="container">
+
+      <p class="section-label reveal">Data Science &amp; Analytics</p>
+      <h2 class="section-title reveal" id="analytics-heading">
+        Data Science <em>Projects</em>
+      </h2>
+
+      <div class="analytics-grid">
+
+        <!-- Customer Churn -->
+        <article class="analytics-card reveal">
+          <h3 class="analytics-card-title">Customer Churn Prediction</h3>
+          <p class="analytics-card-desc">
+            Supervised ML solution predicting customer churn from historical data. Used VIF
+            analysis, recursive feature elimination, and multicollinearity assessment to reduce
+            158 features to the most predictive set — identifying over 4,000 at-risk customers.
+          </p>
+          <div class="featured-tags" style="margin-bottom: 16px;">
+            <span class="tag">Python</span>
+            <span class="tag">Random Forest</span>
+            <span class="tag">SQL</span>
+          </div>
+          <a href="https://github.com/Eriayomide/Customer-Churn-modelling"
+             class="analytics-card-link"
+             target="_blank"
+             rel="noopener noreferrer">View on GitHub</a>
+        </article>
+
+        <!-- Recommendation Engine -->
+        <article class="analytics-card reveal reveal-delay-1">
+          <h3 class="analytics-card-title">Product Recommendation Engine</h3>
+          <p class="analytics-card-desc">
+            Collaborative filtering engine using implicit feedback, sparse matrices, and an ALS
+            model to learn customer purchase behaviour and surface next-best product recommendations.
+            Outperformed a popularity-based baseline on AUC.
+          </p>
+          <div class="featured-tags" style="margin-bottom: 16px;">
+            <span class="tag">Python</span>
+            <span class="tag">Collaborative Filtering</span>
+            <span class="tag">ALS</span>
+          </div>
+          <a href="https://github.com/Eriayomide/Recommendation-Engine"
+             class="analytics-card-link"
+             target="_blank"
+             rel="noopener noreferrer">View on GitHub</a>
+        </article>
+
+        <!-- Sales Forecasting -->
+        <article class="analytics-card reveal reveal-delay-2">
+          <h3 class="analytics-card-title">5-Year Sales Forecast</h3>
+          <p class="analytics-card-desc">
+            Five-year sales forecast using SARIMA and Facebook Prophet across multiple regions
+            and sales channels. Improved forecast accuracy by 10% over baseline, supporting
+            long-term business planning decisions.
+          </p>
+          <div class="featured-tags" style="margin-bottom: 16px;">
+            <span class="tag">Python</span>
+            <span class="tag">SARIMA</span>
+            <span class="tag">Prophet</span>
+          </div>
+          <a href="https://github.com/Eriayomide/AHG-5Years-Sales-Forecast"
+             class="analytics-card-link"
+             target="_blank"
+             rel="noopener noreferrer">View on GitHub</a>
+        </article>
+
+        <!-- Market Basket -->
+        <article class="analytics-card reveal">
+          <h3 class="analytics-card-title">Market Basket Analysis</h3>
+          <p class="analytics-card-desc">
+            Association rule mining using the Apriori algorithm and mlxtend to identify
+            products frequently purchased together. Findings supported product bundling,
+            cross-sell, upsell, and data-driven merchandising strategy.
+          </p>
+          <div class="featured-tags" style="margin-bottom: 16px;">
+            <span class="tag">Python</span>
+            <span class="tag">mlxtend</span>
+            <span class="tag">Association Rules</span>
+          </div>
+          <a href="https://github.com/Eriayomide/Market-Basket-Analysis-for-AHG-Group"
+             class="analytics-card-link"
+             target="_blank"
+             rel="noopener noreferrer">View on GitHub</a>
+        </article>
+
+        <!-- Donor Analytics -->
+        <article class="analytics-card reveal reveal-delay-1">
+          <h3 class="analytics-card-title">Prospective Donor Analytics</h3>
+          <p class="analytics-card-desc">
+            Predictive model to identify prospective donors for a fundraising campaign. Used
+            classification to prioritise outreach toward individuals with higher likelihood
+            of donating, improving resource allocation and campaign effectiveness.
+          </p>
+          <div class="featured-tags" style="margin-bottom: 16px;">
+            <span class="tag">Python</span>
+            <span class="tag">Predictive Modelling</span>
+            <span class="tag">Classification</span>
+          </div>
+          <a href="https://github.com/Eriayomide/Prospective_Donor-Analytics"
+             class="analytics-card-link"
+             target="_blank"
+             rel="noopener noreferrer">View on GitHub</a>
+        </article>
+
+        <!-- Tableau Dashboard -->
+        <article class="analytics-card reveal reveal-delay-2">
+          <h3 class="analytics-card-title">Management Information Dashboard</h3>
+          <p class="analytics-card-desc">
+            Tableau dashboard built from complex Microsoft SQL Server queries, combining
+            transactional, customer, and demographic data into executive-level KPIs and
+            reports that drove cross-sell success rates up by 15%.
+          </p>
+          <div class="featured-tags" style="margin-bottom: 16px;">
+            <span class="tag">Tableau</span>
+            <span class="tag">SQL Server</span>
+            <span class="tag">KPI Reporting</span>
+          </div>
+          <a href="https://public.tableau.com/authoring/Updated_PairviewTableau-Project2/Dashboard1#1"
+             class="analytics-card-link"
+             target="_blank"
+             rel="noopener noreferrer">View Dashboard</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-logo">Oluseye <span>O.</span></div>
+      <p class="footer-copy">&copy; 2025 Oluseye Oyeniran. All rights reserved.</p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="https://www.linkedin.com/in/oluseye-oyeniran-509456109/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/Eriayomide/" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
