@@ -70,35 +70,7 @@
     revealEls.forEach(el => el.classList.add('revealed'));
   }
 
-  /* --- Contact form: basic client-side validation --- */
-  const form = document.querySelector('.contact-form');
-
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      const name    = form.querySelector('#name');
-      const email   = form.querySelector('#email');
-      const message = form.querySelector('#message');
-      let valid = true;
-
-      [name, email, message].forEach(field => {
-        if (!field || !field.value.trim()) {
-          field.style.borderColor = '#c0392b';
-          valid = false;
-        } else {
-          field.style.borderColor = '';
-        }
-      });
-
-      if (valid) {
-        // Replace this with a real form service (e.g. Formspree) when deploying
-        const submitBtn = form.querySelector('.btn-primary');
-        submitBtn.textContent = 'Message Sent';
-        submitBtn.disabled = true;
-        submitBtn.style.opacity = '0.7';
-      }
-    });
-  }
+  /* --- Contact form: Formspree handles submission directly --- */
+  /* No JS interception needed — the form action submits to Formspree */
 
 })();
