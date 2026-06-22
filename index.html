@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Oluseye Oyeniran — AI Engineer, Backend Developer, and Data Scientist building intelligent systems with Python, FastAPI, RAG, and LLMs." />
+  <meta name="description" content="Oluseye Oyeniran, AI Engineer, Backend Developer, and Data Scientist building intelligent systems with Python, FastAPI, RAG, and LLMs." />
   <title>Oluseye Oyeniran — AI Engineer &amp; Data Scientist</title>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -38,36 +38,44 @@
        HERO
   ============================================================ -->
   <section class="hero" aria-label="Introduction">
-    <div class="hero-inner">
+    <div class="hero-inner" style="display: flex; align-items: center; gap: 48px; flex-wrap: wrap;">
 
-      <div class="hero-eyebrow">
-        <div class="hero-eyebrow-line" aria-hidden="true"></div>
-        <span>Based in Abuja, Nigeria</span>
+      <div style="flex: 1; min-width: 280px;">
+        <div class="hero-eyebrow">
+          <div class="hero-eyebrow-line" aria-hidden="true"></div>
+          <span>Based in Abuja, Nigeria</span>
+        </div>
+
+        <h1 class="hero-name">
+          Oluseye
+          <span class="hero-name-last">Oyeniran</span>
+        </h1>
+
+        <div class="hero-title-row">
+          <span class="hero-title-text">AI Engineer</span>
+          <span class="hero-title-sep" aria-hidden="true"></span>
+          <span class="hero-title-text">Backend Developer</span>
+          <span class="hero-title-sep" aria-hidden="true"></span>
+          <span class="hero-title-text">Data Scientist</span>
+        </div>
+
+        <p class="hero-bio">
+          I'm a data scientist and AI engineer with over five years of experience in Python,
+          machine learning, and SQL. I design the architecture for each system I build, then
+          use AI assisted development to ship it end to end, from data pipeline to production
+          backend to the AI layer itself.
+        </p>
+
+        <div class="hero-actions">
+          <a href="projects.html" class="btn btn-primary">View My Work</a>
+          <a href="about.html" class="btn btn-outline">About Me</a>
+        </div>
       </div>
 
-      <h1 class="hero-name">
-        Oluseye
-        <span class="hero-name-last">Oyeniran</span>
-      </h1>
-
-      <div class="hero-title-row">
-        <span class="hero-title-text">AI Engineer</span>
-        <span class="hero-title-sep" aria-hidden="true"></span>
-        <span class="hero-title-text">Backend Developer</span>
-        <span class="hero-title-sep" aria-hidden="true"></span>
-        <span class="hero-title-text">Data Scientist</span>
-      </div>
-
-      <p class="hero-bio">
-        Data Scientist and AI Engineer with 5+ years of hands-on experience in Python,
-        machine learning, and SQL. I build predictive models, design data pipelines, and
-        integrate LLMs into production systems — combining deep analytical work with
-        AI-assisted backend development to ship complete, end-to-end solutions.
-      </p>
-
-      <div class="hero-actions">
-        <a href="projects.html" class="btn btn-primary">View My Work</a>
-        <a href="about.html" class="btn btn-outline">About Me</a>
+      <div style="flex: 0 0 280px; max-width: 100%;">
+        <div style="width: 280px; height: 280px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); margin: 0 auto;">
+          <img src="images/headshot-tight.jpg" alt="Oluseye Oyeniran" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+        </div>
       </div>
 
     </div>
@@ -94,11 +102,12 @@
             <em>African Legal<br>Intelligence Platform</em>
           </h2>
           <p class="featured-desc">
-            A live AI-powered legal research platform I designed and built for African
-            jurisdictions, starting with Nigeria. Ten FastAPI microservices index case law,
-            judgments, and statutes, with a citator, overruling detection, and AI case
-            summaries grounded strictly in retrieved source text — so the system cannot
-            invent a citation. Over 2,100 cases indexed and live in beta.
+            ALIP is a live legal research platform I built for African jurisdictions,
+            starting with Nigeria. Ten FastAPI microservices index case law and statutes,
+            and the platform tracks which authorities are still good law through a citator
+            with overruling detection. Case summaries are written by AI but grounded only
+            in the retrieved source text, so it can't invent a citation that doesn't exist.
+            It's live in beta with over 2,100 cases indexed so far.
           </p>
 
           <div class="featured-tags">
@@ -144,11 +153,12 @@
             <em>WhatsApp Front Desk<br>for African Schools</em>
           </h2>
           <p class="featured-desc">
-            A live multi-tenant SaaS platform built for African private schools. Each school
-            is an isolated tenant enforced at the database level with PostgreSQL row-level
-            security. An AI front desk answers parent questions and fee balance queries over
-            WhatsApp, while the AI engine is architecturally blocked from ever accessing
-            personal fee or parent data outside the active conversation.
+            SchoLink turns a school's WhatsApp number into a full front desk. Parents message
+            in directly and an AI assistant answers questions and looks up fee balances on the
+            spot, while admins handle broadcasts and payment records from a dashboard. Every
+            school is walled off from every other one at the database level, and the AI itself
+            is built so it can never reach into a parent's personal fee data outside of their
+            own conversation.
           </p>
 
           <div class="featured-tags">
@@ -189,8 +199,9 @@
           </div>
           <h3 class="project-card-title">KingdomConnect</h3>
           <p class="project-card-desc">
-            A multi-tenant church management platform serving 465 churches across multiple
-            nations, with role-aware AI that scopes answers by organisational level.
+            A church management platform now running 465 churches across several countries,
+            with an AI assistant that scopes its answers depending on who's asking, a local
+            pastor or someone at the national level.
           </p>
           <div class="project-card-tags">
             <span class="tag">FastAPI</span>
@@ -211,9 +222,9 @@
           </div>
           <h3 class="project-card-title">HopeBridge AI</h3>
           <p class="project-card-desc">
-            A RAG-powered resilience support system for Nigeria. Covers 20 life-challenge
-            categories with a 4-layer conversation flow, crisis detection, and state-specific
-            resource referral in English and Pidgin.
+            A support companion for Nigerians dealing with hard life situations, from job loss
+            to grief, across 20 categories. It has a layered conversation flow and crisis
+            detection that understands Nigerian Pidgin, not just English.
           </p>
           <div class="project-card-tags">
             <span class="tag">RAG</span>
@@ -235,9 +246,9 @@
           </div>
           <h3 class="project-card-title">RAG Chatbot System</h3>
           <p class="project-card-desc">
-            A document-aware AI assistant using retrieval-augmented generation. Ingests
-            enterprise documents, builds a semantic retrieval pipeline, and generates
-            context-grounded responses via the Claude API.
+            A document aware assistant for enterprise use. It ingests a company's documents,
+            builds a retrieval index over them, and answers questions using only what's
+            actually in those documents.
           </p>
           <div class="project-card-tags">
             <span class="tag">Python</span>
@@ -258,9 +269,9 @@
           </div>
           <h3 class="project-card-title">VIN Decoder AI Engine</h3>
           <p class="project-card-desc">
-            An intelligent vehicle identification number decoder built for Nigeria's VREG
-            platform. Uses FastAPI and the Claude API to return structured vehicle data
-            and flag anomalies in registration records.
+            Built for Nigeria's VREG vehicle registration platform. It reads a vehicle
+            identification number, pulls out structured vehicle data, and flags anything
+            in a registration record that looks off.
           </p>
           <div class="project-card-tags">
             <span class="tag">FastAPI</span>
